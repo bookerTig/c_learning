@@ -19,5 +19,7 @@ int main()
 //The answer function is here
 void reverse_order(double *n){
     double answer[10];
-    
+    ;
+    ;
+    ;
 }
