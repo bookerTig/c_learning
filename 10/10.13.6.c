@@ -1,5 +1,7 @@
 #include<stdio.h>
+
 void reverse_order(double *n);
+
 int main()
 {
 
@@ -7,11 +9,19 @@ int main()
     int i;
 
     //print the example array
-    printf("The array is {");
+    printf("The example array is \n{");
     for (i = 0; i < 10; i++)
         printf("%3.1f,", n[i]);
     printf("\b}\n");
 
+    //using the answer function
+    reverse_order(n);
+
+    //check the result
+    printf("The reverse-order array is \n{");
+    for (i = 0; i < 10; i++)
+        printf("%3.1f,", n[i]);
+    printf("\b}\n");
 
     return 0;
 }
@@ -19,6 +29,10 @@ int main()
 //The answer function is here
 void reverse_order(double *n){
     double answer[10];
-    ;
-    ;
+    int i;
+    for (i = 0; i < 10; i++)
+        answer[i] = n[9 - i];
+
+    for (i = 0; i < 10; i ++)
+        n[i] = answer[i];
 }
